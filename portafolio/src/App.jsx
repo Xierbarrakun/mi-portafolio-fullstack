@@ -52,10 +52,15 @@ export default function App() {
   }
 
   return (
-    <Router>
+  <Router basename={import.meta.env.BASE_URL}>
+    <div className="bg-[#0d1117] min-h-screen selection:bg-[#ff5a36] selection:text-white overflow-x-hidden">
+      
+      {/* Tu Navbar Global */}
+      <Navbar />
+
       <Routes>
         {/* Ruta principal pública */}
-        <Route path="/" element={<PortafolioPublico />} />
+        <Route path="/" element={<SeccionesPortafolio />} />
 
         {/* Ruta de administración */}
         <Route 
@@ -69,9 +74,11 @@ export default function App() {
           } 
         />
 
-        {/* Redirección por si escriben cualquier otra ruta que no exista */}
+        {/* Redirección automática de seguridad */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
-    </Router>
+
+    </div>
+  </Router>
   );
 }
