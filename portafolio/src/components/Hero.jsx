@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="relative min-h-[calc(100vh-76px)] flex flex-col justify-between px-10 py-12 bg-cover bg-center bg-no-repeat"
+    <section id="inicio" className="relative min-h-[calc(100vh-76px)] flex flex-col justify-between px-10 py-12 bg-cover bg-center bg-no-repeat"
       style={{ 
         // Metemos una imagen de fondo de Tokyo o de código. El gradiente negro encima es CLAVE para que se vea premium.
         backgroundImage: `linear-gradient(to bottom, rgba(13, 17, 23, 0.4), rgba(13, 17, 23, 0.95)), url('https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1920&q=80')` 
