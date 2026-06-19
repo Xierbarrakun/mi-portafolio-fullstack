@@ -52,7 +52,7 @@ export default function App() {
   }
 
   return (
-  <Router basename={import.meta.env.BASE_URL}>
+  <Router> {/* ← Quita el basename y déjalo limpio así */}
     <div className="bg-[#0d1117] min-h-screen selection:bg-[#ff5a36] selection:text-white overflow-x-hidden">
       
       {/* Tu Navbar Global */}
@@ -74,7 +74,7 @@ export default function App() {
           } 
         />
 
-        {/* Redirección automática de seguridad */}
+        {/* Redirección automática de seguridad si no entra en ninguna ruta */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
 
